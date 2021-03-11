@@ -3,12 +3,12 @@
  */
 package me.ahung.ymir;
 
+import driver.Driver;
 import org.testng.annotations.*;
-import static org.testng.Assert.*;
 
-public class LibraryTest {
-    @Test public void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+public class LibraryTest extends Driver {
+    @Test
+    public void runChromeDriver() {
+        goToPage("http://www.google.com");
     }
 }
